@@ -1,0 +1,37 @@
+﻿<ArcGIS defaultAssembly="TestBinding.dll" defaultNamespace="TestBinding" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{ed4ac85d-f81a-433e-85f7-d2132fefecd5}" version="1.0" desktopVersion="2.8.29751">
+    <Name>TestBinding</Name>
+    <Description>TestBinding description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>chanj</Author>
+    <Company>Acme</Company>
+    <Date>6/23/2022 10:36:28 AM</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <Configuration>
+    <ConfigurationManager className="ConfigurationManager1" />
+  </Configuration>
+  <modules>
+    <insertModule id="TestBinding_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="TestBinding_Tab1" caption="New Tab">
+          <group refID="TestBinding_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <group id="TestBinding.UI.TestWindow_Group1" caption="Group 1" appearsOnAddInTab="true">
+          <button refID="TestBinding_UI_TestWindow_TestWindow" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="TestBinding_UI_TestWindow_TestWindow" caption="TestWindow" className="TestBinding.UI.TestWindow.ShowTestWindow" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
